@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "home": "首页",
+    "history": "历史记录",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "donate": "支持我们"
+  },
+  "home": {
+    "badge": "免费短链接工具",
+    "title": "使用 Min.io 缩短链接",
+    "description": "将冗长复杂的 URL 转换为简洁易分享的短链接，仅需几秒。免费、快速又便捷！",
+    "placeholder": "在此粘贴您的长链接...",
+    "getLink": "生成短链",
+    "copy": "复制链接",
+    "working": "处理中...",
+    "terms": "使用 Min.io 即表示您同意我们的服务条款。",
+    "customLink": "自定义短链接",
+    "customAliasLabel": "自定义别名（可选）",
+    "includeUsername": "在链接中包含我的用户名"
+  },
+  "auth": {
+    "title": "欢迎使用 Min.io",
+    "subtitle": "登录以管理和跟踪您的链接",
+    "googleBtn": "使用 Google 继续",
+    "githubBtn": "使用 GitHub 继续",
+    "terms": "登录即表示您同意我们的服务条款。",
+    "guest": "以访客身份继续",
+    "error_oauth_failed": "OAuth 登录失败，请重试。",
+    "loggingIn": "正在登录..."
+  },
+  "history": {
+    "title": "您的链接历史",
+    "empty": "暂无链接 —— 立即开始创建！🔗",
+    "copy": "复制",
+    "delete": "删除",
+    "clicks": "点击次数"
+  },
+  "donate": {
+    "badge": "支持我们",
+    "title": "支持 Min.io 项目",
+    "description": "扫描下方二维码或复制银行账号快速转账。您的每一份支持都将帮助我们持续改进 Min.io。",
+    "bankInfo": "转账信息",
+    "bank": "银行",
+    "accountNumber": "账号",
+    "copyAccount": "复制账号",
+    "copied": "账号已复制"
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "出现错误",
+    "success": "完成！",
+    "cancel": "取消",
+    "confirm": "确认",
+    "title": {
+      "about": "关于 Min.io - 智能链接分享方式",
+      "contact": "联系我们 - Min.io",
+      "home": "Min.io - 免费短链接工具",
+      "donate": "支持 Min.io",
+      "redirect": "正在跳转... - Min.io"
+    }
+  },
+  "toast": {
+    "copySuccess": "链接已复制！",
+    "copyError": "复制失败，请重试。",
+    "deleteSuccess": "删除成功。",
+    "deleteError": "删除失败，请重试。",
+    "aliasTaken": "该别名已被使用，请更换。",
+    "invalidUrl": "请输入有效的 URL。",
+    "shortenError": "创建短链接失败，请重试。",
+    "createError": "创建短链接失败，请重试。",
+    "createSuccess": "短链接创建成功！"
+  },
+  "about": {
+    "badge": "关于 Min.io",
+    "title": "更智能的链接分享方式",
+    "description": "我们的平台将复杂冗长的 URL 转换为简洁且可追踪的链接，帮助个人、团队和企业以更高效、更可靠的方式优化每一次点击。",
+
+    "features": {
+      "instant": {
+        "title": "即时生成",
+        "desc": "几秒内创建简短易记的链接，适用于社交媒体、消息和营销活动。"
+      },
+      "analytics": {
+        "title": "实时分析",
+        "desc": "跟踪点击、来源渠道和趋势，优化您的链接策略。"
+      },
+      "secure": {
+        "title": "安全可靠",
+        "desc": "稳定的基础设施确保链接安全与高可用性。"
+      }
+    },
+
+    "contactForm": {
+      "title": "给我们留言",
+      "name": "姓名",
+      "email": "邮箱",
+      "subject": "主题",
+      "message": "内容",
+      "submit": "提交请求",
+      "placeholders": {
+        "name": "您的姓名",
+        "email": "email@example.com",
+        "subject": "我们能帮您什么？",
+        "message": "请输入您的内容..."
+      }
+    },
+
+    "contactInfo": {
+      "title": "联系方式",
+      "desc": "需要技术支持或商务合作？请通过以下方式联系我们。",
+      "email": "支持邮箱",
+      "phone": "电话号码",
+      "address": "总部"
+    }
+  },
+  "404": {
+    "title": "404 - 页面未找到",
+    "description": "您访问的页面不存在或已被删除。",
+    "homeButton": "返回首页"
+  },
+  "400": {
+    "title": "糟糕！跳转出现问题",
+    "description": "缺少 URL 参数，请检查后重试。",
+    "homeButton": "返回首页"
+  },
+  "qrcode": {
+    "title": "扫描二维码访问链接",
+    "download": "下载二维码",
+    "cta": "通过扫描二维码或下载图片来分享您的链接。"
+  }
+}

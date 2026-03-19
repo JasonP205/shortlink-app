@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortenLink.API", "ShortenLink.API\ShortenLink.API.csproj", "{CDB71661-A693-4E0E-83C6-E9AFC63B035C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortenLink.Data", "ShortenLink.Data\ShortenLink.Data.csproj", "{72969623-640F-4F5D-B34D-2824319F5D7A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B397E9F7-F116-4F56-B1E5-7FE32549ECAB}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDB71661-A693-4E0E-83C6-E9AFC63B035C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDB71661-A693-4E0E-83C6-E9AFC63B035C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDB71661-A693-4E0E-83C6-E9AFC63B035C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDB71661-A693-4E0E-83C6-E9AFC63B035C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72969623-640F-4F5D-B34D-2824319F5D7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72969623-640F-4F5D-B34D-2824319F5D7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72969623-640F-4F5D-B34D-2824319F5D7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72969623-640F-4F5D-B34D-2824319F5D7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

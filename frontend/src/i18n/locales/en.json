@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "home": "Home",
+    "history": "History",
+    "about": "About Us",
+    "contact": "Contact",
+    "donate": "Donate"
+  },
+  "home": {
+    "badge": " Free URL Shortener",
+    "title": "Shorten Your Links with Min.io",
+    "description": "Turn long, messy URLs into clean, shareable short links in seconds. Free, fast & fun!",
+    "placeholder": "Paste your long URL here...",
+    "getLink": "Shorten ",
+    "copy": "Copy Link",
+    "working": "Shortening...",
+    "terms": "By using Min.io you agree to our Terms of Service.",
+    "customLink": "Custom Short Link",
+    "customAliasLabel": "Custom Alias (optional)",
+    "includeUsername": "Include my username in the link"
+  },
+  "auth": {
+    "title": "Welcome to Min.io ",
+    "subtitle": "Sign in to track and manage your links",
+    "googleBtn": "Continue with Google",
+    "githubBtn": "Continue with GitHub",
+    "terms": "By signing in you agree to our Terms of Service.",
+    "guest": "Continue as Guest",
+    "error_oauth_failed": "OAuth sign-in failed. Please try again.",
+    "loggingIn": "Signing you in..."
+  },
+  "history": {
+    "title": "Your Link History",
+    "empty": "No links yet — start shortening! 🔗",
+    "copy": "Copy",
+    "delete": "Delete",
+    "clicks": "clicks"
+  },
+  "donate": {
+    "badge": "Donate",
+    "title": "Support the Min.io Project",
+    "description": "Scan the QR code below or copy the bank account number to transfer quickly. Every contribution helps us improve Min.io.",
+    "bankInfo": "Transfer Information",
+    "bank": "Bank",
+    "accountNumber": "Account Number",
+    "copyAccount": "Copy account number",
+    "copied": "Account number copied"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "success": "Done!",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "title": {
+      "about": "About Min.io - The Smartest Way to Share Your Links",
+      "contact": "Contact Us - Min.io",
+      "home": "Min.io - Free URL Shortener",
+      "donate": "Donate to Min.io",
+      "redirect": "Redirecting... - Min.io"
+    }
+  },
+  "toast": {
+    "copySuccess": "Link copied to clipboard!",
+    "copyError": "Failed to copy link. Please try again.",
+    "deleteSuccess": "Link deleted successfully.",
+    "deleteError": "Failed to delete link. Please try again.",
+    "aliasTaken": "This custom alias is already taken. Please choose another one.",
+    "invalidUrl": "Please enter a valid URL.",
+    "shortenError": "Failed to create short link. Please try again.",
+    "createError": "Failed to create short link. Please try again.",
+    "createSuccess": "Short link created successfully!"
+  },
+  "about": {
+    "badge": "About Min.io",
+    "title": "The Smartest Way to Share Your Links",
+    "description": "Our platform transforms long, complex URLs into clean and trackable assets. We help creators, teams, and businesses optimize every click with speed, insight, and reliability.",
+
+    "features": {
+      "instant": {
+        "title": "Instant Shortening",
+        "desc": "Create concise, memorable links in seconds for social media, messages, and print campaigns."
+      },
+      "analytics": {
+        "title": "Real-time Analytics",
+        "desc": "Track clicks, referral channels, and performance trends to improve your link strategy."
+      },
+      "secure": {
+        "title": "Secure & Reliable",
+        "desc": "Keep links protected with stable infrastructure and dependable uptime for daily operations."
+      }
+    },
+
+    "contactForm": {
+      "title": "Send Us a Message",
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Submit Request",
+      "placeholders": {
+        "name": "Your name",
+        "email": "email@example.com",
+        "subject": "How can we help?",
+        "message": "Your message here..."
+      }
+    },
+
+    "contactInfo": {
+      "title": "Contact Information",
+      "desc": "Need help with a technical issue or enterprise request? Contact us through the channels below.",
+      "email": "Email Support",
+      "phone": "Phone Number",
+      "address": "Headquarters"
+    }
+  },
+  "404": {
+    "title": "404 - Page Not Found",
+    "description": "The page you're looking for doesn't exist. It might have been removed or is temporarily unavailable.",
+    "homeButton": "Bring me back"
+  },
+  "400": {
+    "title": "Oops! Something went wrong with the redirection",
+    "description": "Missing URL parameter. Make sure the URL is correct and try again. If the problem persists, please contact our support team.",
+    "homeButton": "Bring me back"
+  },
+  "qrcode": {
+    "title": "Scan QR Code to Access Your Link",
+    "download": "Download QR Code",
+    "cta": "Share your short link with others by scanning the QR code or downloading it for later use."
+  }
+}

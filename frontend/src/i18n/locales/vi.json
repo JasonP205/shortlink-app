@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "history": "Lịch sử",
+    "about": "Về chúng tôi",
+    "contact": "Liên hệ",
+    "donate": "Ủng hộ"
+  },
+  "home": {
+    "badge": "Trình rút gọn URL miễn phí",
+    "title": "Rút gọn liên kết với Min.io",
+    "description": "Biến những URL dài và rối rắm thành liên kết ngắn gọn, dễ chia sẻ chỉ trong vài giây. Miễn phí, nhanh chóng và tiện lợi!",
+    "placeholder": "Dán URL dài của bạn tại đây...",
+    "getLink": "Rút gọn",
+    "copy": "Sao chép liên kết",
+    "working": "Đang xử lý...",
+    "terms": "Khi sử dụng Min.io, bạn đồng ý với Điều khoản dịch vụ của chúng tôi.",
+    "customLink": "Liên kết tùy chỉnh",
+    "customAliasLabel": "Tên rút gọn tùy chỉnh (không bắt buộc)",
+    "includeUsername": "Bao gồm tên người dùng của tôi trong liên kết"
+  },
+  "auth": {
+    "title": "Chào mừng đến với Min.io",
+    "subtitle": "Đăng nhập để quản lý và theo dõi liên kết của bạn",
+    "googleBtn": "Tiếp tục với Google",
+    "githubBtn": "Tiếp tục với GitHub",
+    "terms": "Bằng cách đăng nhập, bạn đồng ý với Điều khoản dịch vụ của chúng tôi.",
+    "guest": "Tiếp tục với tư cách khách",
+    "error_oauth_failed": "Đăng nhập OAuth thất bại. Vui lòng thử lại.",
+    "loggingIn": "Đang đăng nhập..."
+  },
+  "history": {
+    "title": "Lịch sử liên kết của bạn",
+    "empty": "Chưa có liên kết nào — hãy bắt đầu rút gọn! 🔗",
+    "copy": "Sao chép",
+    "delete": "Xóa",
+    "clicks": "lượt nhấp"
+  },
+  "donate": {
+    "badge": "Ủng hộ",
+    "title": "Hỗ trợ dự án Min.io",
+    "description": "Quét mã QR bên dưới hoặc sao chép số tài khoản ngân hàng để chuyển khoản nhanh chóng. Mọi đóng góp đều giúp chúng tôi cải thiện Min.io.",
+    "bankInfo": "Thông tin chuyển khoản",
+    "bank": "Ngân hàng",
+    "accountNumber": "Số tài khoản",
+    "copyAccount": "Sao chép số tài khoản",
+    "copied": "Đã sao chép số tài khoản"
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "error": "Đã xảy ra lỗi",
+    "success": "Hoàn thành!",
+    "cancel": "Hủy",
+    "confirm": "Xác nhận",
+    "title": {
+      "about": "Về Min.io - Cách thông minh nhất để chia sẻ liên kết",
+      "contact": "Liên hệ - Min.io",
+      "home": "Min.io - Trình rút gọn URL miễn phí",
+      "donate": "Ủng hộ Min.io",
+      "redirect": "Đang chuyển hướng... - Min.io"
+    }
+  },
+  "toast": {
+    "copySuccess": "Đã sao chép liên kết!",
+    "copyError": "Không thể sao chép liên kết. Vui lòng thử lại.",
+    "deleteSuccess": "Xóa liên kết thành công.",
+    "deleteError": "Xóa liên kết thất bại. Vui lòng thử lại.",
+    "aliasTaken": "Tên rút gọn này đã được sử dụng. Vui lòng chọn tên khác.",
+    "invalidUrl": "Vui lòng nhập URL hợp lệ.",
+    "shortenError": "Không thể tạo liên kết rút gọn. Vui lòng thử lại.",
+    "createError": "Không thể tạo liên kết rút gọn. Vui lòng thử lại.",
+    "createSuccess": "Tạo liên kết thành công!"
+  },
+  "about": {
+    "badge": "Về Min.io",
+    "title": "Cách thông minh nhất để chia sẻ liên kết",
+    "description": "Nền tảng của chúng tôi giúp biến các URL dài và phức tạp thành những liên kết ngắn gọn, dễ theo dõi. Chúng tôi hỗ trợ cá nhân, đội nhóm và doanh nghiệp tối ưu hóa mọi lượt truy cập với tốc độ, dữ liệu và độ tin cậy.",
+
+    "features": {
+      "instant": {
+        "title": "Rút gọn tức thì",
+        "desc": "Tạo liên kết ngắn gọn, dễ nhớ trong vài giây cho mạng xã hội, tin nhắn và chiến dịch in ấn."
+      },
+      "analytics": {
+        "title": "Phân tích theo thời gian thực",
+        "desc": "Theo dõi lượt nhấp, nguồn truy cập và xu hướng hiệu suất để cải thiện chiến lược liên kết."
+      },
+      "secure": {
+        "title": "Bảo mật & ổn định",
+        "desc": "Đảm bảo liên kết của bạn luôn an toàn với hạ tầng ổn định và thời gian hoạt động đáng tin cậy."
+      }
+    },
+
+    "contactForm": {
+      "title": "Gửi tin nhắn cho chúng tôi",
+      "name": "Tên",
+      "email": "Email",
+      "subject": "Chủ đề",
+      "message": "Nội dung",
+      "submit": "Gửi yêu cầu",
+      "placeholders": {
+        "name": "Tên của bạn",
+        "email": "email@example.com",
+        "subject": "Chúng tôi có thể giúp gì?",
+        "message": "Nhập nội dung của bạn..."
+      }
+    },
+
+    "contactInfo": {
+      "title": "Thông tin liên hệ",
+      "desc": "Cần hỗ trợ kỹ thuật hoặc yêu cầu doanh nghiệp? Liên hệ với chúng tôi qua các kênh dưới đây.",
+      "email": "Email hỗ trợ",
+      "phone": "Số điện thoại",
+      "address": "Trụ sở"
+    }
+  },
+  "404": {
+    "title": "404 - Không tìm thấy trang",
+    "description": "Trang bạn tìm kiếm không tồn tại hoặc đã bị xóa.",
+    "homeButton": "Quay về trang chủ"
+  },
+  "400": {
+    "title": "Oops! Có lỗi khi chuyển hướng",
+    "description": "Thiếu tham số URL. Vui lòng kiểm tra lại liên kết và thử lại.",
+    "homeButton": "Quay về trang chủ"
+  },
+  "qrcode": {
+    "title": "Quét mã QR để truy cập liên kết",
+    "download": "Tải xuống mã QR",
+    "cta": "Chia sẻ liên kết của bạn bằng cách quét mã QR hoặc tải về để sử dụng sau."
+  }
+}

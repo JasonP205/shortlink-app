@@ -1,0 +1,24 @@
+@ShortenLink.API_HostAddress = http://localhost:5046
+
+GET {{ShortenLink.API_HostAddress}}/
+Accept: application/json
+
+###
+
+POST {{ShortenLink.API_HostAddress}}/api/create
+Content-Type: application/json
+
+{
+  "originalUrl": "https://example.com/some/very/long/link",
+  "customAlias": "example"
+}
+
+###
+
+GET {{ShortenLink.API_HostAddress}}/api/check?alias=example
+Accept: application/json
+
+###
+
+GET {{ShortenLink.API_HostAddress}}/example
+Accept: application/json
