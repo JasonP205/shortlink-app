@@ -19,23 +19,6 @@
     "customAliasLabel": "Custom Alias (optional)",
     "includeUsername": "Include my username in the link"
   },
-  "auth": {
-    "title": "Welcome to Min.io ",
-    "subtitle": "Sign in to track and manage your links",
-    "googleBtn": "Continue with Google",
-    "githubBtn": "Continue with GitHub",
-    "terms": "By signing in you agree to our Terms of Service.",
-    "guest": "Continue as Guest",
-    "error_oauth_failed": "OAuth sign-in failed. Please try again.",
-    "loggingIn": "Signing you in..."
-  },
-  "history": {
-    "title": "Your Link History",
-    "empty": "No links yet — start shortening! 🔗",
-    "copy": "Copy",
-    "delete": "Delete",
-    "clicks": "clicks"
-  },
   "donate": {
     "badge": "Donate",
     "title": "Support the Min.io Project",
@@ -112,6 +95,18 @@
       "email": "Email Support",
       "phone": "Phone Number",
       "address": "Headquarters"
+    },
+
+    "team": {
+      "title": "Meet the Team",
+      "name": "Name",
+      "studentId": "Student ID",
+      "email": "Email",
+      "member" : {
+        "jason" : "Phan Hoang Phuc",
+        "hugo" : "Le Gia Huy",
+        "tert" : "Nguyen Hoang Thao Tien"
+      }
     }
   },
   "404": {
@@ -128,5 +123,15 @@
     "title": "Scan QR Code to Access Your Link",
     "download": "Download QR Code",
     "cta": "Share your short link with others by scanning the QR code or downloading it for later use."
+  },
+  "redirectPreview": {
+    "safeLink": "Safe Link Preview",
+    "invalidLink": "Invalid Link",
+    "title": "You are about to be redirected",
+    "description": "Preview the destination before opening the link.",
+    "autoRedirect": "Auto redirect in {{seconds}}s",
+    "redirectNow": "Redirect now",
+    "pauseAuto": "Pause auto redirect",
+    "resumeAuto": "Resume auto redirect"
   }
 }

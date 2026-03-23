@@ -1,9 +1,34 @@
 import { Mail, Phone, MapPin, Shield, BarChart3, Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
+import { color } from "framer-motion";
 
 const AboutUs = () => {
   const { t } = useTranslation();
+
+  const contributors = [
+    {
+      name: t("about.team.member.jason"),
+      studentId: "GCS230327",
+      email: "phucphgcs230327@fpt.edu.vn",
+      avatar: "/contributor/phucphan.jpg",
+      color: "#A0C4FF"
+    },
+    {
+      name: t("about.team.member.hugo"),
+      studentId: "GCS230377",
+      email: "huylggcs230377@fpt.edu.vn",
+      avatar: "/contributor/hugo.jpg",
+      color: "#BDB2FF"
+    },
+    {
+      name: t("about.team.member.tert"),
+      studentId: "GCD230012",
+      email: "tiennhtgcd230012@fpt.edu.vn",
+      avatar: "/contributor/tert.png",
+      color: "#FFC6FF"
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-brand-gradient bg-gradient-grid text-[#2D3748]">
@@ -64,124 +89,33 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* CONTACT */}
+      {/* Team */}
       <section className="px-6 pb-16 sm:pb-24">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-2">
-          
-          {/* FORM */}
-          <div className="brand-card p-8">
-            <h2 className="mb-6 text-2xl sm:text-3xl font-gelasio-700 font-bold">
-              {t("about.contactForm.title")}
-            </h2>
-
-            <form className="space-y-4">
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <div>
-                  <label className="mb-1 block text-sm font-semibold">
-                    {t("about.contactForm.name")}
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full rounded-xl border border-[#A0C4FF]/60 bg-white px-3 py-2.5 outline-none transition focus:border-[#6B9FE4]"
-                    placeholder={t("about.contactForm.placeholders.name")}
-                  />
+        <div className="brand-card p-8 max-w-6xl mx-auto space-y-10">
+          <h2 className="text-center font-gelasio-700 text-3xl ">
+            {t("about.team.title")}
+          </h2>
+          <div className="flex flex-col lg:flex-row items-center">
+            {contributors.map((contributor) => (
+              <div key={contributor.studentId} className={`flex-1 p-4 border max-w-sm border-[${contributor.color}]/50 rounded-2xl bg-white/70 m-2 flex flex-col items-center`}>
+                <div className="size-30">
+                  <img className="w-full rounded-full h-full object-cover" src={contributor.avatar} alt={contributor.name} />
                 </div>
-
-                <div>
-                  <label className="mb-1 block text-sm font-semibold">
-                    {t("about.contactForm.email")}
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full rounded-xl border border-[#A0C4FF]/60 bg-white px-3 py-2.5 outline-none transition focus:border-[#6B9FE4]"
-                    placeholder={t("about.contactForm.placeholders.email")}
-                  />
+                <div className="flex flex-col mt-2 justify-center items-center">
+                  <span className="italic text-muted-foreground">{t("about.team.name")}</span>
+                  <p className="font-gelasio-700">{contributor.name}</p>
+                </div>
+                <div className="flex flex-col mt-2 justify-center items-center">
+                  <span className="italic text-muted-foreground">{t("about.team.studentId")}</span>
+                  <p className="font-gelasio-700">{contributor.studentId}</p>
+                </div>
+                <div className="flex flex-col mt-2 justify-center items-center">
+                  <span className="italic text-muted-foreground">{t("about.team.email")}</span>
+                  <p className="font-gelasio-700">{contributor.email}</p>
                 </div>
               </div>
-
-              <div>
-                <label className="mb-1 block text-sm font-semibold">
-                  {t("about.contactForm.subject")}
-                </label>
-                <input
-                  type="text"
-                  className="w-full rounded-xl border border-[#BDB2FF]/60 bg-white px-3 py-2.5 outline-none transition focus:border-[#7E70D6]"
-                  placeholder={t("about.contactForm.placeholders.subject")}
-                />
-              </div>
-
-              <div>
-                <label className="mb-1 block text-sm font-semibold">
-                  {t("about.contactForm.message")}
-                </label>
-                <textarea
-                  rows={5}
-                  className="w-full rounded-xl border border-[#FFC6FF]/70 bg-white px-3 py-2.5 outline-none transition focus:border-[#CC7FCC]"
-                  placeholder={t("about.contactForm.placeholders.message")}
-                />
-              </div>
-
-              <button
-                type="button"
-                className="w-full rounded-xl bg-[#A0C4FF] py-3 font-bold text-[#2D3748] transition hover:bg-[#8CB6F8]"
-              >
-                {t("about.contactForm.submit")}
-              </button>
-            </form>
+            ))}
           </div>
-
-          {/* CONTACT INFO */}
-          <div className="brand-card p-8">
-            <h2 className="mb-3 text-2xl sm:text-3xl font-gelasio-700 font-bold">
-              {t("about.contactInfo.title")}
-            </h2>
-
-            <p className="mb-8 text-[#718096]">
-              {t("about.contactInfo.desc")}
-            </p>
-
-            <div className="space-y-5">
-              <div className="flex items-start gap-4 rounded-xl bg-white/70 p-4 border border-[#A0C4FF]/40">
-                <div className="rounded-full bg-[#A0C4FF]/40 p-3 text-[#2D3748]">
-                  <Mail size={20} />
-                </div>
-                <div>
-                  <h4 className="font-bold">
-                    {t("about.contactInfo.email")}
-                  </h4>
-                  <p className="text-[#718096]">contact@shorten.io</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 rounded-xl bg-white/70 p-4 border border-[#BDB2FF]/40">
-                <div className="rounded-full bg-[#BDB2FF]/40 p-3 text-[#2D3748]">
-                  <Phone size={20} />
-                </div>
-                <div>
-                  <h4 className="font-bold">
-                    {t("about.contactInfo.phone")}
-                  </h4>
-                  <p className="text-[#718096]">+84 798 020 513</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 rounded-xl bg-white/70 p-4 border border-[#FFC6FF]/50">
-                <div className="rounded-full bg-[#FFC6FF]/50 p-3 text-[#2D3748]">
-                  <MapPin size={20} />
-                </div>
-                <div>
-                  <h4 className="font-bold">
-                    {t("about.contactInfo.address")}
-                  </h4>
-                  <p className="leading-relaxed text-[#718096]">
-                    20 Cong Hoa Garden, Ward 12, Tan Binh District,
-                    Ho Chi Minh City, Vietnam
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </section>
     </div>

@@ -12,6 +12,7 @@ import { ArrowRight, CirclePause, Globe } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import NotFound from "./NotFound";
+import { useTranslation } from "react-i18next";
 
 const REDIRECT_SECONDS = 5;
 
@@ -26,6 +27,7 @@ const safeDecode = (value: string | null) => {
 };
 
 const RedirectPage = () => {
+  const { t } = useTranslation();
   const [params] = useSearchParams();
   const [remainingSeconds, setRemainingSeconds] = useState(REDIRECT_SECONDS);
   const [isAutoRedirectEnabled, setIsAutoRedirectEnabled] = useState(true);
@@ -42,7 +44,7 @@ const RedirectPage = () => {
   );
 
   const hostName = useMemo(() => {
-    if (!preview.url) return "Unknown destination";
+    if (!preview.url) return null;
 
     try {
       return new URL(preview.url).host;
@@ -78,9 +80,16 @@ const RedirectPage = () => {
 
   const progressValue =
     ((REDIRECT_SECONDS - remainingSeconds) / REDIRECT_SECONDS) * 100;
+
   if (!preview.url) {
+    return <NotFound isRedirectFailed />;
+  }
+  try {
+    new URL(preview.url);
+  } catch {
     return <NotFound isRedirectFailed={true} />;
   }
+
   return (
     <main className="relative flex-1 overflow-hidden bg-gradient-grid px-4 py-4 sm:px-6 sm:py-5">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(160,196,255,0.25),transparent_45%),radial-gradient(circle_at_80%_75%,rgba(255,198,255,0.2),transparent_50%)]" />
@@ -95,15 +104,17 @@ const RedirectPage = () => {
                 variant="flat"
                 startContent={<Globe size={14} />}
               >
-                {preview.url ? "Safe Link Preview" : "Invalid Link"}
+                {preview.url
+                  ? t("redirectPreview.safeLink")
+                  : t("redirectPreview.invalidLink")}
               </Chip>
 
               <div className="space-y-0.5">
                 <h1 className="text-xl font-gelasio-700 text-[#2D3748] sm:text-2xl">
-                  Bạn sắp được chuyển hướng
+                  {t("redirectPreview.title")}
                 </h1>
                 <p className="text-sm text-[#718096]">
-                  Xem trước điểm đến trước khi mở liên kết.
+                  {t("redirectPreview.description")}
                 </p>
               </div>
             </CardHeader>
@@ -126,10 +137,13 @@ const RedirectPage = () => {
                 <div className="space-y-1.5">
                   <div className="flex items-center justify-between text-sm text-[#4a5568]">
                     <span>
-                      Tự động chuyển sau <strong>{remainingSeconds}s</strong>
+                      {t("redirectPreview.autoRedirect", {
+                        seconds: remainingSeconds,
+                      })}
                     </span>
                     <span>{Math.round(progressValue)}%</span>
                   </div>
+
                   <Progress
                     aria-label="Redirect countdown"
                     value={progressValue}
@@ -146,8 +160,9 @@ const RedirectPage = () => {
                     endContent={<ArrowRight size={18} />}
                     onPress={redirectNow}
                   >
-                    Chuyển ngay
+                    {t("redirectPreview.redirectNow")}
                   </Button>
+
                   <Button
                     variant="bordered"
                     radius="full"
@@ -156,14 +171,12 @@ const RedirectPage = () => {
                     onPress={() => setIsAutoRedirectEnabled((state) => !state)}
                   >
                     {isAutoRedirectEnabled
-                      ? "Dừng tự động chuyển"
-                      : "Tiếp tục tự động chuyển"}
+                      ? t("redirectPreview.pauseAuto")
+                      : t("redirectPreview.resumeAuto")}
                   </Button>
                 </div>
               </>
-            ) : (
-              <></>
-            )}
+            ) : null}
           </CardBody>
         </Card>
       </section>

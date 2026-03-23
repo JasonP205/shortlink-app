@@ -10,7 +10,7 @@ builder.Services.AddCors(options =>
         policy =>
         {
             policy
-                .WithOrigins("http://localhost:5173")
+                .WithOrigins("http://localhost:4243")
                 .AllowAnyHeader()
                 .AllowAnyMethod()
                 .AllowCredentials();
@@ -78,11 +78,12 @@ app.MapGet("/{code}", async (
     ILinkService linkService,
     IConfiguration configuration,
     CancellationToken cancellationToken) =>
-{
+{   
+    var clientUrl = configuration.GetValue<string>("ClientUrl");
     var existingLink = await linkService.GetByCodeAsync(code, cancellationToken);
     if (existingLink is null)
     {
-        return Results.NotFound(new { message = $"Short code '{code}' was not found." });
+        return Results.Redirect($"{clientUrl}/not-found");
     }
 
     if (!existingLink.IsActive)
@@ -93,10 +94,8 @@ app.MapGet("/{code}", async (
     var trackedLink = await linkService.RegisterClickAsync(code, cancellationToken);
     if (trackedLink is null)
     {
-        return Results.NotFound(new { message = $"Short code '{code}' was not found." });
+        return Results.Redirect($"{clientUrl}/not-found");
     }
-
-    var clientUrl = configuration.GetValue<string>("ClientUrl");
     if (string.IsNullOrWhiteSpace(clientUrl))
     {
         return Results.Problem("ClientUrl is not configured.");

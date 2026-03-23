@@ -19,23 +19,6 @@
     "customAliasLabel": "自定义别名（可选）",
     "includeUsername": "在链接中包含我的用户名"
   },
-  "auth": {
-    "title": "欢迎使用 Min.io",
-    "subtitle": "登录以管理和跟踪您的链接",
-    "googleBtn": "使用 Google 继续",
-    "githubBtn": "使用 GitHub 继续",
-    "terms": "登录即表示您同意我们的服务条款。",
-    "guest": "以访客身份继续",
-    "error_oauth_failed": "OAuth 登录失败，请重试。",
-    "loggingIn": "正在登录..."
-  },
-  "history": {
-    "title": "您的链接历史",
-    "empty": "暂无链接 —— 立即开始创建！🔗",
-    "copy": "复制",
-    "delete": "删除",
-    "clicks": "点击次数"
-  },
   "donate": {
     "badge": "支持我们",
     "title": "支持 Min.io 项目",
@@ -112,6 +95,18 @@
       "email": "支持邮箱",
       "phone": "电话号码",
       "address": "总部"
+    },
+
+    "team": {
+      "title": "我们的团队",
+      "name": "姓名",
+      "studentId": "学号",
+      "email": "邮箱",
+      "member" : {
+        "jason" : "潘黄福",
+        "hugo" : "黎家辉",
+        "tert" : "阮黄韬仙"
+      }
     }
   },
   "404": {
@@ -128,5 +123,15 @@
     "title": "扫描二维码访问链接",
     "download": "下载二维码",
     "cta": "通过扫描二维码或下载图片来分享您的链接。"
+  },
+  "redirectPreview": {
+    "safeLink": "安全链接预览",
+    "invalidLink": "无效链接",
+    "title": "您即将被重定向",
+    "description": "在打开链接前预览目标页面。",
+    "autoRedirect": "{{seconds}}秒后自动跳转",
+    "redirectNow": "立即跳转",
+    "pauseAuto": "暂停自动跳转",
+    "resumeAuto": "继续自动跳转"
   }
 }

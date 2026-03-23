@@ -19,23 +19,6 @@
     "customAliasLabel": "Tên rút gọn tùy chỉnh (không bắt buộc)",
     "includeUsername": "Bao gồm tên người dùng của tôi trong liên kết"
   },
-  "auth": {
-    "title": "Chào mừng đến với Min.io",
-    "subtitle": "Đăng nhập để quản lý và theo dõi liên kết của bạn",
-    "googleBtn": "Tiếp tục với Google",
-    "githubBtn": "Tiếp tục với GitHub",
-    "terms": "Bằng cách đăng nhập, bạn đồng ý với Điều khoản dịch vụ của chúng tôi.",
-    "guest": "Tiếp tục với tư cách khách",
-    "error_oauth_failed": "Đăng nhập OAuth thất bại. Vui lòng thử lại.",
-    "loggingIn": "Đang đăng nhập..."
-  },
-  "history": {
-    "title": "Lịch sử liên kết của bạn",
-    "empty": "Chưa có liên kết nào — hãy bắt đầu rút gọn! 🔗",
-    "copy": "Sao chép",
-    "delete": "Xóa",
-    "clicks": "lượt nhấp"
-  },
   "donate": {
     "badge": "Ủng hộ",
     "title": "Hỗ trợ dự án Min.io",
@@ -112,6 +95,18 @@
       "email": "Email hỗ trợ",
       "phone": "Số điện thoại",
       "address": "Trụ sở"
+    },
+
+    "team": {
+      "title": "Đội ngũ của chúng tôi",
+      "name": "Tên",
+      "studentId": "Mã sinh viên",
+      "email": "Email",
+      "member" : {
+        "jason" : "Phan Hoàng Phúc",
+        "hugo" : "Lê Gia Huy",
+        "tert" : "Nguyễn Hoàng Thảo Tiên"
+      }
     }
   },
   "404": {
@@ -128,5 +123,15 @@
     "title": "Quét mã QR để truy cập liên kết",
     "download": "Tải xuống mã QR",
     "cta": "Chia sẻ liên kết của bạn bằng cách quét mã QR hoặc tải về để sử dụng sau."
+  },
+  "redirectPreview": {
+    "safeLink": "Xem trước liên kết an toàn",
+    "invalidLink": "Liên kết không hợp lệ",
+    "title": "Bạn sắp được chuyển hướng",
+    "description": "Xem trước điểm đến trước khi mở liên kết.",
+    "autoRedirect": "Tự động chuyển sau {{seconds}}s",
+    "redirectNow": "Chuyển ngay",
+    "pauseAuto": "Dừng tự động chuyển",
+    "resumeAuto": "Tiếp tục tự động chuyển"
   }
 }

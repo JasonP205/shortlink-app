@@ -13,9 +13,11 @@ const NotFound = ({ isRedirectFailed }: NotFoundProps) => {
   if (isRedirectFailed) {
     return (
       <div className="w-full flex flex-col justify-center items-center gap-3">
-          <Helmet>
-            <title>{t("400.title")}</title>
-          </Helmet>
+        <Helmet>
+          <title>{t("400.title")}</title>
+          <meta property="og:title" content={t("400.title")} />
+          <meta property="og:description" content={t("400.description")} />
+        </Helmet>
         <DotLottieReact
           style={{ width: "50%", height: "50%" }}
           src="/lotties/400-animate.lottie"
@@ -44,6 +46,11 @@ const NotFound = ({ isRedirectFailed }: NotFoundProps) => {
   }
   return (
     <div className="w-full flex flex-col justify-center items-center gap-3">
+      <Helmet>
+        <title>{t("404.title")}</title>
+        <meta property="og:title" content={t("404.title")} />
+        <meta property="og:description" content={t("404.description")} />
+      </Helmet>
       <DotLottieReact
         style={{ width: "50%", height: "50%" }}
         src="/lotties/404-animate.lottie"
