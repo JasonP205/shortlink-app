@@ -16,7 +16,7 @@ import { EllipsisVertical, Link as LinkIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const urlFormSchema = z.object({
-  originalUrl: z.string().url("Please enter a valid URL"),
+  originalUrl: z.url("Please enter a valid URL"),
   customAlias: z.string().optional(),
   includeUsername: z.boolean().optional(),
 });
@@ -47,8 +47,13 @@ const CreateLinkForm = () => {
     await createLink(data.originalUrl, customAlias || undefined);
   };
 
+  const onInvalid = (formErrors: typeof errors) => {
+    if (formErrors.originalUrl) {
+      toast.error(formErrors.originalUrl.message || t("toast.invalidUrl"));
+    }
+  };
+
   useEffect(() => {
-    if (customAlias === "") return; // Skip validation if custom alias is empty
     const validateAlias = async () => {
       await checkAlias(customAlias);
       if (isAliasTaken) {
@@ -59,15 +64,13 @@ const CreateLinkForm = () => {
     return () => clearTimeout(checkAliasDebounce);
   }, [customAlias, checkAlias, isAliasTaken]);
 
-  useEffect(() => {
-    if (errors.originalUrl) {
-      toast.error(errors.originalUrl.message || t("toast.invalidUrl"));
-    }
-  }, [errors]);
-
   return (
     <>
-      <form className="space-y-2" onSubmit={handleSubmit(onSubmit)}>
+      <form
+        className="space-y-2"
+        noValidate
+        onSubmit={handleSubmit(onSubmit, onInvalid)}
+      >
         <Card className="p-3 flex bg-white/60 backdrop-blur-md flex-row rounded-full gap-2 items-center justify-center border border-[#A0C4FF]/40">
           {copyMode ? (
             <>

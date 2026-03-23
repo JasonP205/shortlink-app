@@ -10,7 +10,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"), // Định nghĩa @ trỏ về src
+      "@": path.resolve(__dirname, "./src"),
     },
   },
   server: {

@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { useLinkStore } from "@/stores/useLinkStore";
 import Qrcode from "@/components/createLinkPage/Qrcode";
+
 const CreateShortLinkPage = () => {
   const { t } = useTranslation();
   const { createdLink, copyMode } = useLinkStore();
@@ -34,9 +35,11 @@ const CreateShortLinkPage = () => {
         </div>
         <div className="flex-1 max-w-md md:max-w-xl aspect-square rounded-md overflow-hidden">
           {copyMode ? (
-            <div className="max-w-sm md:max-w-xl mx-auto"><Qrcode url={createdLink?.shortUrl!} /></div>
+            <div className="max-w-sm md:max-w-xl mx-auto">
+              <Qrcode url={createdLink?.shortUrl!} />
+            </div>
           ) : (
-            <DotLottieReact src="/lotties/hero-section.lottie" autoplay loop />
+            <DotLottieReact src="/lotties/hero.lottie" autoplay loop />
           )}
         </div>
       </div>

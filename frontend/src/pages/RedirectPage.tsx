@@ -43,6 +43,15 @@ const RedirectPage = () => {
     [params],
   );
 
+  if (!preview.url) {
+    return <NotFound isRedirectFailed />;
+  }
+  try {
+    new URL(preview.url);
+  } catch {
+    return <NotFound isRedirectFailed={true} />;
+  }
+
   const hostName = useMemo(() => {
     if (!preview.url) return null;
 
@@ -80,15 +89,6 @@ const RedirectPage = () => {
 
   const progressValue =
     ((REDIRECT_SECONDS - remainingSeconds) / REDIRECT_SECONDS) * 100;
-
-  if (!preview.url) {
-    return <NotFound isRedirectFailed />;
-  }
-  try {
-    new URL(preview.url);
-  } catch {
-    return <NotFound isRedirectFailed={true} />;
-  }
 
   return (
     <main className="relative flex-1 overflow-hidden bg-gradient-grid px-4 py-4 sm:px-6 sm:py-5">

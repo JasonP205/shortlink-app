@@ -6,10 +6,10 @@ export const LinkService = {
       originalUrl,
       customAlias,
     });
-    return response.data; //Return shortened link
+    return response.data;
   },
   checkAlias: async (alias: string) => {
     const response = await api.get(`/check?alias=${alias}`);
-    return response.data.isTaken; // Return true if alias is taken, false otherwise
+    return response.data.isTaken;
   },
 };

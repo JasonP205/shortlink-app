@@ -3,6 +3,7 @@ import { toast } from "@/lib/toast";
 import { useTranslation } from "react-i18next";
 import { useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { Button } from "@heroui/button";
 
 const Donate = () => {
   const { t } = useTranslation();
@@ -41,23 +42,22 @@ const Donate = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:items-center">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <div className="rounded-2xl border border-[#A0C4FF]/50 bg-white/80 p-5 sm:p-6">
               <img
                 src={qrUrl}
-                alt="QR chuyen khoan MB Bank"
-                className="mx-auto w-full max-w-xs rounded-xl border border-[#e2e8f0] bg-white p-3"
+                alt="Bank Transfer QR Code"
+                className="mx-auto w-full max-w-xs rounded-xl"
               />
-              <p className="mt-3 text-center text-xs text-[#718096]">
-                VietQR - {bankName} ({bankBin})
-              </p>
             </div>
 
             <div className="rounded-2xl border border-[#BDB2FF]/50 bg-white/80 p-5 sm:p-6">
               <h2 className="text-xl font-bold">{t("donate.bankInfo")}</h2>
               <div className="mt-4 space-y-3 text-sm sm:text-base">
                 <div className="flex items-center justify-between rounded-xl bg-[#F8F9FA] px-4 py-3 border border-[#e2e8f0]">
-                  <span className="font-semibold text-[#718096]">{t("donate.bank")}</span>
+                  <span className="font-semibold text-[#718096]">
+                    {t("donate.bank")}
+                  </span>
                   <span className="font-bold">{bankName}</span>
                 </div>
 
@@ -68,24 +68,22 @@ const Donate = () => {
                   <input
                     value={accountNumber}
                     disabled
-                    onChange={(e) => setAccountNumber(e.target.value.replace(/\s+/g, ""))}
+                    onChange={(e) =>
+                      setAccountNumber(e.target.value.replace(/\s+/g, ""))
+                    }
                     className="w-full rounded-lg border border-[#A0C4FF]/60 bg-white px-3 py-2 font-bold tracking-wide outline-none"
                   />
                 </div>
+                <Button
+                  type="button"
+                  color="primary"
+                  fullWidth
+                  onPress={copyAccountNumber}
+                >
+                  <Copy size={16} />
+                  {t("donate.copyAccount")}
+                </Button>
               </div>
-
-              <button
-                type="button"
-                onClick={copyAccountNumber}
-                className="mt-5 inline-flex items-center gap-2 rounded-xl bg-[#A0C4FF] px-4 py-2.5 font-semibold transition hover:bg-[#8CB6F8]"
-              >
-                <Copy size={16} />
-                {t("donate.copyAccount")}
-              </button>
-
-              <p className="mt-3 text-xs text-[#718096]">
-                Neu app ngan hang bao tai khoan khong ton tai, vui long kiem tra lai so tai khoan (co the thieu so 0 o dau).
-              </p>
             </div>
           </div>
         </div>
@@ -94,4 +92,4 @@ const Donate = () => {
   );
 };
 
-export default Donate
+export default Donate;

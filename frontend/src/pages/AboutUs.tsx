@@ -1,7 +1,6 @@
-import { Mail, Phone, MapPin, Shield, BarChart3, Zap } from "lucide-react";
+import { Shield, BarChart3, Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
-import { color } from "framer-motion";
 
 const AboutUs = () => {
   const { t } = useTranslation();
@@ -97,7 +96,7 @@ const AboutUs = () => {
           </h2>
           <div className="flex flex-col lg:flex-row items-center">
             {contributors.map((contributor) => (
-              <div key={contributor.studentId} className={`flex-1 p-4 border max-w-sm border-[${contributor.color}]/50 rounded-2xl bg-white/70 m-2 flex flex-col items-center`}>
+              <div key={contributor.studentId} className={`flex-1 p-4 border w-81 hover:bg-[${contributor.color}] lg:w-full border-[${contributor.color}]/50 rounded-2xl bg-white/70 m-2 flex flex-col items-center`}>
                 <div className="size-30">
                   <img className="w-full rounded-full h-full object-cover" src={contributor.avatar} alt={contributor.name} />
                 </div>
